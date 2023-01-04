@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VG205EM34"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0VG205EM34');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Project - Task Management</title>
+
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-mynav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Task Management</a>
+        </div>
+    </nav>
+
+    <ul class="nav nav-pills justify-content-center mt-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-material-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-material" type="button" role="tab" aria-controls="pills-material"
+                aria-selected="true">Materials</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-task-tab" data-bs-toggle="pill" data-bs-target="#pills-task"
+                type="button" role="tab" aria-controls="pills-task" aria-selected="false">Tasks</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-material" role="tabpanel" aria-labelledby="pills-material-tab">
+            <div class="container">
+                <div class="d-flex bd-highlight mb-3">
+                    <div class="me-auto p-2 bd-highlight">
+                        <h2>Materials
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="btn btn-secondary" onclick="showMaterialCreateBox()">Create</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Part Number</th>
+                                <th scope="col">Manufacturer Code</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Unit of Issue</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="materialTable">
+                            <tr>
+                                <th scope="row" colspan="5">Loading...</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-task" role="tabpanel" aria-labelledby="pills-task-tab">
+            <div class="container">
+                <div class="d-flex bd-highlight mb-3">
+                    <div class="me-auto p-2 bd-highlight">
+                        <h2>Tasks
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="btn btn-secondary" onclick="showTaskCreateBox()">Create</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Total Duration</th>
+                                <th scope="col">Material</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Unit of Measurement</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskTable">
+                            <tr>
+                                <th scope="row" colspan="5">Loading...</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="index.js"></script> -->
+    <script src="material.js"></script>
+    <script src="task.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
